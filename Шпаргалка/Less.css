@@ -1,0 +1,153 @@
+@color-base: #2d5e8b;
+
+.class1 {
+    background-color: @color-base;
+}
+.class2 {
+    background-color: #fff;
+    color: @color-base;
+}
+.class3 {
+    border: 1px solid @color-base;
+}
+@font-family: Georgia
+@dot-border: dotted
+@transition: linear
+@opacity: 0.5
+
+.gradients {
+    background: #eaeaea;
+    background: linear-gradient(top, #eaeaea, #cccccc);
+    background: -o-linear-gradient(top, #eaeaea, #cccccc);
+    background: -ms-linear-gradient(top, #eaeaea, #cccccc);
+    background: -moz-linear-gradient(top, #eaeaea, #cccccc);
+    background: -webkit-linear-gradient(top, #eaeaea, #cccccc);
+}
+.box {
+    .gradients;
+    border: 1px solid #555;
+    border-radius: 3px;
+}
+
+div {
+    .rounded(3px);
+}
+
+nav {
+    height: 40px;
+    width: 100%;
+    background: #455868;
+    border-bottom: 2px solid #283744;
+    li {
+        width: 600px;
+        height: 40px;
+        a {
+            color: #fff;
+            line-height: 40px;
+            text-shadow: 1px 1px 0px #283744;
+        }
+    }
+}
+
+a {
+    color: #fff;
+    line-height: 40px;
+    text-shadow: 1px 1px 0px #283744;
+    &:hover {
+        background-color: #000;
+        color: #fff;
+    }
+}
+
+@height: 100px;
+
+.element-A {
+    height: @height;
+}
+.element-B {
+    height: @height * 2;
+}
+
+header {
+    @color: black;
+    background-color: @color;
+    nav {
+        @color: blue;
+        background-color: @color;
+        a {
+            color: @color;
+        }
+    }
+}
+
+@nice-blue: #5B83AD;
+@light-blue: @nice-blue + #111;
+
+#defaults {
+  @width: 960px;
+  @color: black;
+}
+.bordered {
+  border-top: dotted 1px black;
+  border-bottom: solid 2px black;
+}
+
+.article { color: #294366; }
+
+.comment {
+  width: #defaults[@width];
+  color: .article['color'];
+  .bordered;
+}
+
+
+.rounded_top(@radius:6px) {
+    -webkit-border-top-left-radius: @radius;
+    -webkit-border-top-right-radius: @radius;
+    -moz-border-radius-topleft: @radius;
+    -moz-border-radius-topright: @radius;
+    border-top-left-radius: @radius;
+    border-top-right-radius: @radius;
+}
+
+
+@font-face {
+    font-family: 'Kurale-regular';
+    src: url('../font/kurale-regular.eot');
+    src: url('../font/kurale-regular.eot?#iefix') format('embedded-opentype'),
+         url('../font/kurale-regular.woff') format('woff'),
+         url('../font/Kurale-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+
+@font_main: "Roboto-light";
+@font_size: 16px;
+
+@font_Kurale: "Kurale-regular";
+@font_lith: "lithospro-regular";
+
+@font_size_12: 12px;
+@font_size_14: 14px;
+@font_size_18: 18px;
+@font_size_19: 19px;
+@font_size_20: 20px;
+@font_size_22: 22px;
+@font_size_24: 24px;
+@font_size_26: 26px;
+@font_size_28: 28px;
+@font_size_30: 30px;
+@font_size_32: 32px;
+@font_size_36: 36px;
+@font_size_40: 40px;
+@font_size_41: 41px;
+@font_size_50: 50px;
+
+
+
+@color_green:#21d3af;
+@color_blue:#2cb5c3;
+
+@the-border: 1px;

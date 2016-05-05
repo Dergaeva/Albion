@@ -1,0 +1,55 @@
+@font-face {
+    font-family: 'pt_sansregular';
+    src: url('../fonts/PT_Sans-Web-Regular-webfont.eot');
+    src: url('../fonts/PT_Sans-Web-Regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/PT_Sans-Web-Regular-webfont.woff2') format('woff2'),
+         url('../fonts/PT_Sans-Web-Regular-webfont.woff') format('woff'),
+         url('../fonts/PT_Sans-Web-Regular-webfont.ttf') format('truetype'),
+         url('../fonts/PT_Sans-Web-Regular-webfont.svg#pt_sansregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@import "base/variables";
+@import "base/mixins";
+@import "base/reset";
+//@import "form";
+
+@font-base: OpenSans-Regular;
+@line-height: 48px;
+@large-height: 30px;
+@base-border: 2px;
+@font-size:14px;
+@color-gray:#959595;
+@title-gray:#191919;
+@bg-color: #24272e;
+
+
+.container{
+    margin:0 auto;
+    overflow: hidden;
+}
+.logo{
+    float:left;
+    margin-left: 55px;
+    a{
+        display: block;
+        margin:0;
+    }
+}
+.shadow {
+  -webkit-box-shadow: inset 0 -3px 3px 1px rgba(25, 25, 25, 0.59);
+  -moz-box-shadow:    inset 0 -3px 3px 1px rgba(25, 25, 25, 0.59);
+  box-shadow:         inset 0 -3px 3px 1px rgba(25, 25, 25, 0.59);
+}
+.shover {
+  -webkit-box-shadow: inset 0 -3px 3px 1px rgba(0, 0, 0, 0.59);
+  -moz-box-shadow:    inset 0 -3px 3px 1px rgba(0, 0, 0, 0.59);
+  box-shadow:         inset 0 -3px 3px 1px rgba(0, 0, 0, 0.59);
+}
+.mouse {
+    cursor: url(../images/mouse.png), pointer;
+}
+.red-color {
+    color:#ff4533;
+}

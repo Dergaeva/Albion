@@ -1,0 +1,268 @@
+  / Позиционирование /
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100;
+
+  / Блочная модель /
+  display: block;
+  float: right;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  padding: 10px;
+
+  / Типографика /
+  font: normal 13px/1.5 "Arial", sans-serif;
+  font-style: normal;
+  font-size: 13px;
+  line-height: 1.5;
+  font-family: "Arial", sans-serif;
+  text-align: center;
+
+  / Оформление /
+  color: #333333;
+  background-color: #f5f5f5;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+  opacity: 1;
+
+  / Анимация /
+  transition: color 1s;
+
+Позиционирование следует первым потому,
+ что оно влияет на положение блоков в потоке документа.
+  Блочная модель идёт следующей, так как она определяет
+   размеры и расположение блоков.
+
+Все остальные объявления, которые изменяют вид внутренних частей
+ блоков и не оказывают влияния на другие блоки, идут в последнюю
+  очередь.
+
+Сгруппированные объявления в правиле отделяются друг от друга пустой
+ строкой.
+
+Порядок объявления подробных правил, таких как font-size,
+ font-family, line-height, должен соответствовать порядку
+  в сокращённой версии правила. В случае совместного использования
+   подробных и сокращённых правил, первой должна идти сокращённая
+   версия.
+
+
+
+   /*font-weight*/
+
+100
+    Тонкий (Волосяной)thin
+200
+    Дополнительный светлый (Сверхсветлый)
+300
+    Светлыйlight
+400
+    Нормальный Regular
+500
+    Средний
+600
+    Полужирный (Demi Bold)SemiBold
+700
+    ЖирныйBold
+800
+    Дополнительный жирный (Сверхжирный)ExtraBold
+900
+    Черный (Густой)
+
+
+            /* Large desktop */
+        @media (min-width: 1200px) { ... }
+
+        /* Portrait tablet to landscape and desktop */
+        @media (min-width: 768px) and (max-width: 979px) { ... }
+
+        /* Landscape phone to portrait tablet */
+        @media (max-width: 767px) { ... }
+
+        /* Landscape phones and down */
+        @media (max-width: 480px) { ... }
+
+#news > div:not(:first-child) > a {
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+    line-height: 180px;
+    text-align: center;
+
+    }
+
+    #news > div:not(:first-child) > img {
+        max-height: 180px;
+        max-width: 100%;
+        vertical-align: middle;
+        }
+
+
+background: [background-attachment || background-color || background-image
+  || background-position || background-repeat] | inherit
+
+
+background: [<фон>, ]* <последний_фон>
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtmll/DTD/xhtml1-transitional.dtd">
+
+@font-face {
+    font-family: 'Roboto-thin';
+    src: url('../font/roboto-thin.eot');
+    src: url('../font/roboto-thin.eot?#iefix') format('embedded-opentype'),
+         url('../font/roboto-thin.woff') format('woff'),
+         url('../font/Roboto-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'Roboto-regular';
+    src: url('../font/roboto-regular.eot');
+    src: url('../font/roboto-regular.eot?#iefix') format('embedded-opentype'),
+         url('../font/roboto-regular.woff') format('woff'),
+         url('../font/Roboto-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'Roboto-light';
+    src: url('../font/roboto-light.eot');
+    src: url('../font/roboto-light.eot?#iefix') format('embedded-opentype'),
+         url('../font/roboto-light.woff') format('woff'),
+         url('../font/Roboto-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'Roboto-bold';
+    src: url('../font/roboto-bold.eot');
+    src: url('../font/roboto-bold.eot?#iefix') format('embedded-opentype'),
+         url('../font/roboto-bold.woff') format('woff'),
+         url('../font/Roboto-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'lithospro-regular';
+    src: url('../font/lithospro-regular.eot');
+    src: url('../font/lithospro-regular.eot?#iefix') format('embedded-opentype'),
+         url('../font/lithospro-regular.woff') format('woff'),
+         url('../font/lithospro-regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'Kurale-regular';
+    src: url('../font/kurale-regular.eot');
+    src: url('../font/kurale-regular.eot?#iefix') format('embedded-opentype'),
+         url('../font/kurale-regular.woff') format('woff'),
+         url('../font/Kurale-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+
+}
+
+/*переход на мобиле*/
+$('#pronav .pronavlilul>a').click(function (event) {
+            if (!$(this).siblings().hasClass("open")) {
+                console.log("12");
+                $(this).siblings().addClass("open").siblings().removeClass("open");
+                return false;
+            }
+        });
+
+
+/*блоки одного размера*/
+sameHeight("div.col");
+
+function sameHeight(selector){
+    var maxheight = 0;
+    $(selector).each(function() {
+      if($(this).height() > maxheight) { maxheight = $(this).height(); }
+    });
+
+    $(selector).height(maxheight);
+}
+
+/*размер экрана*/
+if (window.matchMedia('(max-width: 768px)').matches)
+{
+    // do functionality on screens smaller than 768px
+}
+
+/**/
+jQuery(function($) {
+    // В класс "page" обернуто все содержимое страницы. 
+    // Можно повесить событие и на body, но тогда это меню не будет работать на I-pad
+    jQuery('.navigation > li > a').click(function( event ){
+        // проверяем находится ли элемент на который кликнули в нашем меню,
+        // то есть в контейнере "menu-container"
+        var eventInMenu = $( event.target ).parents('.dropdown-list');
+
+        // если родителя нет, значит клик был вне меню и меню сворачиваем
+        if( !eventInMenu.length ){
+            $('.dropdown').hide();
+        }
+    });
+
+    jQuery('.menu-container').click(function(){
+        $('.dropdown').show();
+    });
+});
+
+/*Треугольник с закругленными краями*/
+/**
+ * How to make 3-corner-rounded triangle in CSS (SO)
+ * http://stackoverflow.com/q/14446677/1397351
+ */
+.triangle {
+  position: relative;
+  background-color: orange;
+  text-align: left;
+}
+.triangle:before,
+.triangle:after {
+  content: '';
+  position: absolute;
+  background-color: inherit;
+}
+.triangle,
+.triangle:before,
+.triangle:after {
+  width:  10em;
+  height: 10em;
+  border-top-right-radius: 30%;
+}
+
+.triangle {
+  transform: rotate(-60deg) skewX(-30deg) scale(1,.866);
+}
+.triangle:before {
+  transform: rotate(-135deg) skewX(-45deg) scale(1.414,.707) translate(0,-50%);
+}
+.triangle:after {
+  transform: rotate(135deg) skewY(-45deg) scale(.707,1.414) translate(50%);
+}
+
+
+
+/* styles below for demonstration purposes only */
+body { padding: 30%; }
+.triangle:hover { background: rgba(0,0,255,.5) }
+.triangle:hover:before { background: rgba(255,0,0,.5) }
+.triangle:hover:after { background: rgba(255,255,0,.5) }
+
+/*html*/
+<!-- content to be placed inside <body>…</body> -->
+<div class='triangle'></div>

@@ -1,0 +1,144 @@
+-------------------------- html --------------------------------------------
+
+
+<div id="no-more-tables">
+<table class="col-md-12 table-striped table-condensed cf">
+<thead class="cf">
+<tr>
+<th class="numeric">Название курса</th>
+<th class="numeric">Продолжительность обучения</th>
+<th class="numeric">Длительность занятия</th>
+<th class="numeric">Стоимость, грн.</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td data-title="Название курса">Суперпамять (базовый)
+<a href="#myModal" data-toggle="modal" data-target="#myModal">подробнее</a></td>
+<td data-title="Продолжительность обучения">11 занятий</td>
+<td class="numeric" data-title="Длительность занятия">1,5 часа, 2 раза в неделю</td>
+<td class="numeric" data-title="Стоимость, грн.">1200 грн.</td>
+</tr>
+<tr>
+<td data-title="Название курса">Суперпамять (продвинутый)
+<a href="#myModal" data-toggle="modal" data-target="#myModal2">подробнее</a></td>
+<td data-title="Продолжительность обучения">8 занятий</td>
+<td class="numeric" data-title="Длительность занятия">1,5 часа</td>
+<td class="numeric" data-title="Стоимость, грн.">900 грн.</td>
+</tr>
+<tr>
+<td data-title="Название курса">Техника эффективного освоения иностранных языков
+<a href="#myModal" data-toggle="modal" data-target="#myModal3">подробнее</a></td>
+<td data-title="Продолжительность обучения">11 занятий</td>
+<td class="numeric" data-title="Длительность занятия">1,5 часа,  2 раза в неделю</td>
+<td class="numeric" data-title="Стоимость, грн.">1500 грн.</td>
+</tr>
+<tr>
+<td data-title="Название курса">Скорочтение
+<a href="#myModal" data-toggle="modal" data-target="#myModal4">подробнее</a></td>
+<td data-title="Продолжительность обучения">10 занятий</td>
+<td class="numeric" data-title="Длительность занятия">2,5  часа каждый день</td>
+<td class="numeric" data-title="Стоимость, грн.">1800 грн.</td>
+</tr>
+<tr>
+<td data-title="Название курса">Мой ребенок - гений
+<a href="#myModal" data-toggle="modal" data-target="#myModal5">подробнее</a></td>
+<td data-title="Продолжительность обучения">8 занятий в месяц</td>
+<td class="numeric" data-title="Длительность занятия">1 час, 2 раза в неделю</td>
+<td class="numeric" data-title="Стоимость, грн.">600 грн./мес.</td>
+</tr>
+</tbody>
+</table>
+
+</div>	
+
+
+
+-------------------------- less ---------------------------------------------
+
+#no-more-tables{
+		border: none;
+		table{
+			border: none;
+			thead{
+				border: none;
+				tr{
+				border: none;
+				padding: 25px 0;
+					th{
+						border: none;
+						font-weight: bold;
+						padding: 25px 5px;
+					}
+				}
+			}
+			tbody{
+				tr{
+					border: none;
+					td{
+						border: none;
+						padding: 25px 5px;
+						vertical-align: middle;
+						a{
+							color: #3498db;
+							transition: all 0.3s linear;
+							&:hover,
+							&:focus{
+								color: #3478f0;
+							}
+						}
+						span{
+							font-family: "Ubuntu", arial, helvetica, sans-serif;
+							font-size: 3rem;
+							color: #252525;
+							font-weight: 400;
+						}
+					}
+				}
+				>tr:nth-of-type(2n+1){
+					background-color: #eeeeee;
+				}
+			}
+		}
+	}
+	@media only screen and (max-width: 800px) {
+		/* Force table to not be like tables anymore */
+		#no-more-tables table, 
+		#no-more-tables thead, 
+		#no-more-tables tbody, 
+		#no-more-tables th, 
+		#no-more-tables td, 
+		#no-more-tables tr { 
+			display: block; 
+		}
+		/* Hide table headers (but not display: none;, for accessibility) */
+		#no-more-tables thead tr { 
+			position: absolute;
+			top: -9999px;
+			left: -9999px;
+		}
+	/* 	#no-more-tables tr { border: 1px solid #ccc; } */
+		#no-more-tables td { 
+			/* Behave  like a "row" */
+			border: none;
+	/* 		border-bottom: 1px solid #eee;  */
+			position: relative;
+			padding-left: 50%; 
+			white-space: normal;
+			text-align:left;
+		}
+		#no-more-tables td:before { 
+			/* Now like a table header */
+			position: absolute;
+			/* Top/left values mimic padding */
+			top: 6px;
+			left: 6px;
+			width: 45%; 
+			padding-right: 10px; 
+			white-space: nowrap;
+			text-align:left;
+			font-weight: bold;
+		}
+		/*Label the data*/
+		#no-more-tables td:before { content: attr(data-title); }
+	}

@@ -1,0 +1,28 @@
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+Алгоритм
+Цель/контекст=результат(в процентах)
+
+Шрифт
+font:100%/1.5em ...
+В остнову заложили шрифт 16px
+Пример 24/16=1.5 em
+
+Один из вариантов со статичными элементами в адаптивной верстке:
+display: table;
+display: table-cell;
+display: raw;
+
+@media only screen and (min(max)-width:...){}
+
+
+Адаптация (оптимизация картинок) картинок:
+picturefill
+
+Для IE9 и ниже подключаем отдельную библиотеку, есть в 7 уроке
+
+Для тестирования сайтов
+http://lab.maltewassermann.com/viewpo...
+http://www.responsinator.com/
+http://designmodo.com/responsive-test/
+
